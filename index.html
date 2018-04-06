@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <script>
+                                                            //Задание №1
+    var a = 1, b = 1, c, d;
+    c = ++a;  // c = 2 и а = 2, потому что к переменной а мы сначала прибавили еденицу (преинкриментом) а потом присвоили к а переменную с
+    d = b++;  // d = 1 и b = 2, потому что мы сначала присвоили к b переменную d, а только потом к b прибавили единицу(посинкримент)
+    c = (2+ ++a);  // c = 5, а = 3, потому что к переменной а равной 2 мы сначала прибавили единицу, посредством преинкримента, т.е. а уже = 3, а потом к двум прибавили 3
+    d = (2+ b++);  // d = 4, b = 3, потому что мы сначала к двум прибавляем переменную b, тоесть 2+2, а потом к переменной b прибавляем 1 (посинкримент)
+
+
+                                                            //Задание №2
+    var a = 2;
+    var x = 1 + (a *= 2);// х = 5, потому что по правилам математики сначала выполняются действия в скобках, тоесть 2*2, а затем прибавляем 1
+    alert("X равен: " + x);
+
+                                                            //Задание №3
+
+ var a = 5, b = -2;
+ if(a >= 0 && b >= 0) {
+   alert("Разность переменных а и b равна: " + (a-b));
+ }  else if( a <= 0 && b <= 0) {
+   alert("Произведение переменных а и b равно: " + (a*b));
+ }  else {
+   alert("Сумма переменных а и b равна: " + (a+b));
+ }
+
+                                                            //Задание №4
+
+var a = parseInt(Math.random() * (15-0)+0);
+alert("Отсчёт начинается с: " + a);
+switch(a){
+  case 0:
+  document.write(0+"<br>");
+  case 1:
+  document.write(1+"<br>");
+  case 2:
+  document.write(2+"<br>");
+  case 3:
+  document.write(3+"<br>");
+  case 4:
+  document.write(4+"<br>");
+  case 5:
+  document.write(5+"<br>");
+  case 6:
+  document.write(6+"<br>");
+  case 7:
+  document.write(7+"<br>");
+  case 8:
+  document.write(8+"<br>");
+  case 9:
+  document.write(9+"<br>");
+  case 10:
+  document.write(10+"<br>");
+  case 11:
+  document.write(11+"<br>");
+  case 12:
+  document.write(12+"<br>");
+  case 13:
+  document.write(13+"<br>");
+  case 14:
+  document.write(14+"<br>");
+  case 15:
+  document.write(15+"<hr>");
+}
+                                                     //Задание №5
+function plus(a,b){
+  return a + b;
+}
+function minus(a,b){
+  return a - b;
+}
+function multiply(a,b){
+  return a * b;
+}
+function divide(a,b){
+  return a / b;
+}
+document.write(plus(5,5)+" - сложение <br>"+ minus(5,5)+" - вычитание <br>"+ multiply(5,5)+" - умножение <br>"+ divide(5,5) +" - деление <hr>");
+
+
+                                                        //Задание №6
+  function myFunction(a,b,operation){
+    switch(operation){
+      case '+':
+      document.write(plus(a,b));
+      break;
+      case '-':
+      document.write(minus(a,b));
+      break;
+      case '*':
+      document.write(multiply(a,b));
+      break;
+      case '/':
+      document.write(divide(a,b));
+      break;
+      default:
+      document.write('Выберите одну из четырёх арифмитических операций: сложение, вычитание, умножение или деление')
+    }
+  }
+document.write("Результат работы функции: "),myFunction(8,9,'*');
+document.write('<br> <hr>');
+
+
+                                                    //Задание №7
+//null - это объект, а 0 - это число, но интересно что если с помощью parseInt мы приведём null к целочисленному значению, то null превращается в 0, но только как тип данных, математические операции с ним всё равно не возможны, выдаёт NaN
+// var aa=parseInt(null);
+// var bb=0;
+// alert(aa+1);
+// alert(bb+1);
+// alert(typeof(aa));
+// alert(typeof(bb));
+
+                                                      //Задание №8
+  function power(val,pow){
+  if(pow == 1){
+  return val;
+  }
+  return val*power(val,pow-1);
+}
+  alert(power(2,6));
+
+
+    </script>
+  </body>
+</html>
